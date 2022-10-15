@@ -192,15 +192,11 @@ body {
       animation: second-bounce 1s infinite; }
   .clock-container .minute {
     z-index: 5;
-    -webkit-animation: minute 3600s linear infinite;
-    -moz-animation: minute 3600s linear infinite;
-    -ms-animation: minute 3600s linear infinite;
-    -o-animation: minute 3600s linear infinite;
-    animation: minute 3600s linear infinite; }
-    .clock-container .minute:after {
+  }
+  .clock-container .minute:after {
       content: "";
-      background-color: #fff;
-      width: 0.4em;
+      background-color: rgb(207, 212, 217);
+      width: 1em;
       height: 9.25em;
       margin-top: 0.75em;
       position: absolute;
@@ -222,7 +218,7 @@ body {
     animation: hour 43200s linear infinite; }
     .clock-container .hour:after {
       content: "";
-      background-color: #fff;
+      background-color: rgb(207, 212, 217);
       width: 0.8em;
       height: 5em;
       margin: 0 auto;
@@ -251,8 +247,8 @@ body {
       width: 2em;
       height: 2em;
       border-radius: 1.5em;
-      background-color: #000;
-      border: 0.2em solid #666;
+      background-color: rgb(0, 0, 0);
+      border: 0.2em solid #ccc000;
       position: absolute;
       margin: 0 auto;
       left: 0;
