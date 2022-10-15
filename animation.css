@@ -13,3 +13,6 @@
 .clock-container .second{
     animation: rotate 60s infinite linear;
   }
+.clock-container .chronos .second-hand{
+    animation: rotate 1s infinite linear;
+  }
