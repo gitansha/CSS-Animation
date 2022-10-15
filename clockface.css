@@ -181,10 +181,7 @@ body {
     left: 0;
     right: 0;
     top: .75em;
-    
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  
+    border-radius: 5px;  
   }
       
   .clock-container .hour {
@@ -199,9 +196,7 @@ body {
       right: 0;
       margin-top: 5em;
       position: absolute;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    
+      border-radius: 20px;
     }
   .clock-container .center-mask {
     width: 18em;
