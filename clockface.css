@@ -175,12 +175,12 @@ body {
     background-color: rgb(207, 212, 217);
     width: 0.4em;
     height: 9.0em;
-    margin-top: 0.75em;
+    /* margin-top: 3em; */
     position: absolute;
     margin: 0 auto;
     left: 0;
-    right: 0;
-    top: .75em;
+    right: 0.2em;
+    top: 1.5em;
     border-radius: 5px;  
   }
       
@@ -194,7 +194,7 @@ body {
       margin: 0 auto;
       left: 0;
       right: 0;
-      margin-top: 5em;
+      margin-top: 5.25em;
       position: absolute;
       border-radius: 20px;
     }
