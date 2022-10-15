@@ -12,13 +12,14 @@ body {
   padding: 0px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-family: "karla", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
   overflow-x: hidden; }
 
 .clock {
   position: absolute;
   width: 10em;
-  background-color: #111;
+  background-color: #444; /* Strap Color */
   height: 100%;
   margin: 0 auto;
   left: 0;
@@ -30,16 +31,16 @@ body {
   left: -6em;
   top: 50%;
   margin-top: -10em;
-  background-color: #222;
+  background-color: #222 /* Face Color */;
   border-radius: 12em;
   position: relative;
-  border: 1em solid #111;
-  /*	overflow: hidden;*/ }
+  border: 1em solid rgb(207, 212, 217) /* Face Boder Color */;
+ }
   .clock-container:after {
     content: "";
     height: 2em;
     width: 1em;
-    background-color: #111;
+    background-color: hwb(210 81% 25%) /*Setting Switch Color*/;
     position: absolute;
     right: -2em;
     top: 50%;
@@ -86,35 +87,26 @@ body {
       top: 50%;
       margin-top: -1.25em;
       z-index: 3; }
-    .clock-container .chronos .hand {
+
+    .clock-container .chronos .second-hand {
+      z-index: 4;
       width: 3em;
       height: 3em;
       position: absolute;
-      z-index: 4; }
-    .clock-container .chronos .second {
-      z-index: 6;
-      -webkit-animation: second 30s steps(120, end) infinite;
-      -moz-animation: second 30s steps(120, end) infinite;
-      -ms-animation: second 30s steps(120, end) infinite;
-      -o-animation: second 30s steps(120, end) infinite;
-      animation: second 30s steps(120, end) infinite; }
-      .clock-container .chronos .second:after {
-        content: "";
-        background-color: #fff;
-        width: 0.1em;
-        height: 1.25em;
-        /*				margin-bottom: 0.5em;*/
-        position: absolute;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: .25em;
-        -webkit-transform-origin: 0% 100%;
-        -moz-transform-origin: 0% 100%;
-        -ms-transform-origin: 0% 100%;
-        -o-transform-origin: 0% 100%;
-        transform-origin: 0% 100%;
-        /*				@include prefix(animation, second-bounce 0.5s  infinite);*/ }
+      }
+
+    .clock-container .chronos .second-hand:after {
+      content: "";
+      background-color: #fff;
+      width: 0.1em;
+      height: 1.25em;
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: .25em;
+    }
+
   .clock-container .notches {
     list-style: none;
     padding: 0;
@@ -122,7 +114,7 @@ body {
     .clock-container .notches li {
       height: 20em;
       width: 0.2em;
-      background-color: #fff;
+      background-color: #ccc000;
       position: absolute;
       margin: 0 auto;
       left: 0;
@@ -162,15 +154,10 @@ body {
     height: 20em;
     position: absolute; }
   .clock-container .second {
-    z-index: 6;
-    -webkit-animation: second 60s steps(60, end) infinite;
-    -moz-animation: second 60s steps(60, end) infinite;
-    -ms-animation: second 60s steps(60, end) infinite;
-    -o-animation: second 60s steps(60, end) infinite;
-    animation: second 60s steps(60, end) infinite; }
+    z-index: 6; }
     .clock-container .second:after {
       content: "";
-      background-color: red;
+      background-color: #ccc000;
       width: 0.4em;
       height: 9.25em;
       margin-top: 1em;
@@ -179,43 +166,29 @@ body {
       margin: 0 auto;
       left: 0;
       right: 0;
-      top: .75em;
-      -webkit-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%;
-      -webkit-animation: second-bounce 1s infinite;
-      -moz-animation: second-bounce 1s infinite;
-      -ms-animation: second-bounce 1s infinite;
-      -o-animation: second-bounce 1s infinite;
-      animation: second-bounce 1s infinite; }
+      top: .75em;}
   .clock-container .minute {
     z-index: 5;
   }
   .clock-container .minute:after {
-      content: "";
-      background-color: rgb(207, 212, 217);
-      width: 1em;
-      height: 9.25em;
-      margin-top: 0.75em;
-      position: absolute;
-      margin: 0 auto;
-      left: 0;
-      right: 0;
-      top: .75em;
-      -webkit-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%; }
+    content: "";
+    background-color: rgb(207, 212, 217);
+    width: 0.2em;
+    height: 9.25em;
+    margin-top: 0.75em;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: .75em;
+    
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  
+  }
+      
   .clock-container .hour {
-    z-index: 4;
-    -webkit-animation: hour 43200s linear infinite;
-    -moz-animation: hour 43200s linear infinite;
-    -ms-animation: hour 43200s linear infinite;
-    -o-animation: hour 43200s linear infinite;
-    animation: hour 43200s linear infinite; }
+    z-index: 4;}
     .clock-container .hour:after {
       content: "";
       background-color: rgb(207, 212, 217);
@@ -226,11 +199,10 @@ body {
       right: 0;
       margin-top: 5em;
       position: absolute;
-      -webkit-transform-origin: 0% 100%;
-      -moz-transform-origin: 0% 100%;
-      -ms-transform-origin: 0% 100%;
-      -o-transform-origin: 0% 100%;
-      transform-origin: 0% 100%; }
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    
+    }
   .clock-container .center-mask {
     width: 18em;
     height: 18em;
