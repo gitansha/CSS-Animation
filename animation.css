@@ -1,0 +1,15 @@
+@keyframes rotate {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+
+.clock-container .hour {
+    animation: rotate 43200s infinite linear;
+  }
+.clock-container .minute{
+    animation: rotate 3600s infinite linear;
+  }
+.clock-container .second{
+    animation: rotate 60s infinite linear;
+  }
