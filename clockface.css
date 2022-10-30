@@ -19,7 +19,7 @@ body {
 .clock {
   position: absolute;
   width: 10em;
-  background-color: #444; /* Strap Color */
+  background-color: rgb(167, 33, 33); /* Strap Color */
   height: 100%;
   margin: 0 auto;
   left: 0;
